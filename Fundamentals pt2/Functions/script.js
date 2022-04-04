@@ -15,4 +15,17 @@ function fruitProcessor (apples, oranges) {
 
 let myJuice = fruitProcessor(5, 4);
 console.log(myJuice);
-console.log(fruitProcessor(858548, 85));
+console.log(fruitProcessor(846219, 85));
+
+// Function declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear
+}
+
+// Function expression
+const calcAge2 = function (birthYear){ // Anonymous function
+    return 2037 - birthYear
+}
+
+console.log(calcAge2(1994));
+console.log(calcAge1(1994));
