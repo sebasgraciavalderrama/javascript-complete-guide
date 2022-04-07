@@ -1,42 +1,13 @@
-let markHeight, markMass;
-let johnHeight, johnMass;
-let markHigherBMI;
+const bills = [125, 555, 44];
 
-//Test data 1
-markMass = 78;
-markHeight = 1.69;
-markBMI = markMass / markHeight ** 2;
+let finalTip = bills[0] >= 50 && bills[0] <=300 ? 0.15 : 0.20;
+let totalWithTip = (bills[0] + (bills[0]*finalTip));
+console.log(`Your total bill is: ${bills[0]} and the tip is ${finalTip}, you total with tip included is: ${totalWithTip}`)
 
-johnMass = 92
-johnHeight = 1.95
-johnBMI = johnMass / johnHeight ** 2;
+finalTip = bills[1] >= 50 && bills[1] <=300 ? 0.15 : 0.20;
+totalWithTip = (bills[1] + (bills[1]*finalTip));
+console.log(`Your total bill is: ${bills[1]} and the tip is ${finalTip}, you total with tip included is: ${totalWithTip}`)
 
-markHigherBMI = markBMI > johnBMI;
-console.log(markHigherBMI)
-
-if (markHigherBMI) {
-    console.log(`Mark's BMI (${markBMI}) is higher thant John's (${johnBMI})!`)
-} else {
-    console.log(`John's BMI (${johnBMI}) is higher thant Mark's (${markBMI})!`)
-}
-
-
-//Test data 2
-markMass = 95;
-markHeight = 1.88;
-markBMI = markMass / markHeight ** 2;
-
-johnMass = 85
-johnHeight = 1.76
-johnBMI = johnMass / johnHeight ** 2;
-
-markHigherBMI = markBMI > johnBMI;
-console.log(markHigherBMI)
-
-if (markHigherBMI) {
-    console.log(`Mark's BMI (${markBMI}) is higher thant John's (${johnBMI})!`)
-} else {
-    console.log(`John's BMI (${johnBMI}) is higher thant Mark's (${markBMI})!`)
-}
-
-
+finalTip = bills[2] >= 50 && bills[2] <=300 ? 0.15 : 0.20;
+totalWithTip = (bills[2] + (bills[2]*finalTip));
+console.log(`Your total bill is: ${bills[2]} and the tip is ${finalTip}, you total with tip included is: ${totalWithTip}`)
