@@ -1,31 +1,30 @@
-let dolphinsAverage = (96+108+89)/3;
-let koalasAverage = (88+91+110)/3;
-
-if (dolphinsAverage > koalasAverage) {
-    console.log(`Dolphins won with an average score of ${dolphinsAverage}`);
-} else if (dolphinsAverage < koalasAverage) {
-    console.log(`Koalas won with an average score of ${koalasAverage}`);
-} else if (dolphinsAverage === koalasAverage) {
-    console.log(`DRAW! Koalas average score:${koalasAverage} and Dolphins average score:${dolphinsAverage}`);
-}
-dolphinsAverage = (97+112+101)/3;
-koalasAverage = (109+95+123)/3;
-
-if (dolphinsAverage > koalasAverage) {
-    console.log(`Dolphins won with an average score of ${dolphinsAverage}`);
-} else if (dolphinsAverage < koalasAverage) {
-    console.log(`Koalas won with an average score of ${koalasAverage}`);
-} else if (dolphinsAverage === koalasAverage) {
-    console.log(`DRAW! Koalas average score:${koalasAverage} and Dolphins average score:${dolphinsAverage}`);
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 79,
+    height: 1.69,
+    calcBMI: function () {
+        return this.mass / (this.height * this.height);
+    },
+    toString: function () {
+        return `${this.fullName} weights ${this.mass} and is ${this.height} tall.`
+    }
 }
 
-dolphinsAverage = (97+112+101)/3;
-koalasAverage = (109+95+106)/3;
-
-if (dolphinsAverage > koalasAverage) {
-    console.log(`Dolphins won with an average score of ${dolphinsAverage}`);
-} else if (dolphinsAverage < koalasAverage) {
-    console.log(`Koalas won with an average score of ${koalasAverage}`);
-} else if (dolphinsAverage === koalasAverage) {
-    console.log(`DRAW! Koalas average score:${koalasAverage} and Dolphins average score:${dolphinsAverage}`);
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        return this.mass / (this.height * this.height);
+    },
+    toString: function () {
+        return `${this.fullName} weights ${this.mass} and is ${this.height} tall.`
+    }
 }
+
+console.log(mark.toString());
+console.log(mark.calcBMI());
+
+console.log(john.toString());
+console.log(john.calcBMI());
+
