@@ -34,3 +34,4 @@ const poll = {
 
 document.querySelector('.poll').addEventListener('click', poll.answerPollQuestion.bind(poll));
 poll.consoleLoggedQuestion();
+poll.displayResults.call({answers: [5,2,3]}, 'string');
