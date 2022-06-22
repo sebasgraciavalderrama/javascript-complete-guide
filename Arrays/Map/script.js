@@ -75,33 +75,21 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
-// SLICE
-let arr = ['a', 'b', 'c', 'd', 'e'];
-console.log(arr.slice(2)); // c, d, e
-console.log(arr.slice(2, 4)); // c, d
-console.log(arr.slice(-2)); // d, e
-console.log(arr.slice(-1)); // e
-console.log(arr.slice(1, -2)); // b, c
-console.log(arr.slice()); // 'a', 'b', 'c', 'd', 'e'
-console.log([...arr]); // 'a', 'b', 'c', 'd', 'e'
+const eurToUsd = 1.1;
 
-// SPLICE - Does mutate the original array
-//console.log(arr.splice(2)); // c, d, e
-arr.splice(-1); // a,b,c,d
-console.log(arr);
-arr.splice(1, 2); // a, d
-console.log(arr);
+const movementsUSD = movements.map(function (mov) {
+    return mov * eurToUsd;
+});
 
-// REVERSE - Does mutate the original array
-arr = ['a', 'b', 'c', 'd', 'e'];
-const arr2 = ['j', 'i', 'h', 'g', 'f'];
-console.log(arr2.reverse()); // 'f', 'g', 'h', 'i', 'j'
-console.log(arr2);
+console.log(movements);
+console.log(movementsUSD);
 
-// CONCAT
-const letters = arr.concat(arr2); // 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'
-console.log(letters);
-console.log([...arr, ...arr2]); // 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'
+// Arrow function
+const movementsUSDArrow = movements.map(result => result * eurToUsd);
+console.log(movementsUSDArrow);
 
-// JOIN
-console.log(letters.join(' - ')); // a-b-c-d-e-f-g-h-i-j
+const movementsDescriptions = movements.map((mov, i) =>
+    `Movement ${i + 1}: You ${mov > 0 ? 'deposited': 'withdrew'} ${Math.abs(mov)}`
+);
+
+console.log(movementsDescriptions);
